@@ -61,7 +61,7 @@ if __name__ == "__main__":
     two_fa = TwoFactorAuth(smtp_server, smtp_port, smtp_username, smtp_password, from_email)
 
     # Ask the user for the recipient's email
-    user_email = input("Enter the recipient's email: ")
+    user_email = input("Enter the recipient's EMAIL: ")
 
     # Generate an OTP and send it to the user's email
     otp = two_fa.generate_otp()
@@ -69,7 +69,7 @@ if __name__ == "__main__":
     otp_timestamp = time.time()
 
     # Simulate user entering the OTP
-    user_entered_otp = input("Enter the OTP sent to your email: ")
+    user_entered_otp = input("Enter the OTP sent to your EMAIL:  ")
 
     # Verify the OTP
     is_valid, message = two_fa.verify_otp(user_entered_otp, otp, otp_timestamp)
